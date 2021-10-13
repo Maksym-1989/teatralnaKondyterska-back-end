@@ -1,0 +1,40 @@
+{
+  "name": "teatralnakondyterska-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maksym-1989/teatralnaKondyterska-back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maksym-1989/teatralnaKondyterska-back-end/issues"
+  },
+  "homepage": "https://github.com/Maksym-1989/teatralnaKondyterska-back-end#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "2.8.5",
+    "cross-env": "7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "4.17.1",
+    "gravatar": "^1.8.2",
+    "jimp": "^0.16.1",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.7",
+    "morgan": "1.10.0",
+    "multer": "^1.4.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
