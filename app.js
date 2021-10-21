@@ -25,6 +25,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/v1/auth", api.auth);
+app.use("/api/v1/orders", api.orders);
 
 mongoose.connection.on("connected", () => {
   console.log(`Database connection successful PORT=${PORT}`);

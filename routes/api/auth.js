@@ -6,5 +6,7 @@ const { auth: ctrl } = require("../../controllers");
 const { validateUser, authentificate } = require("../../middlewares");
 
 router.post("/signup", validateUser, ctrl.signup);
+router.post("/signin", validateUser, ctrl.signin);
+router.get("/logout", authentificate, ctrl.logout);
 
 module.exports = router;
