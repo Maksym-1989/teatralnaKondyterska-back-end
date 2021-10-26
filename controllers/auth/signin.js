@@ -28,9 +28,7 @@ const signin = async (req, res, next) => {
     res.json({
       status: "success",
       code: 200,
-      data: {
-        token,
-      },
+      result: user,
     });
   } catch (error) {
     next(error);
