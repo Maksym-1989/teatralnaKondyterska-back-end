@@ -16,7 +16,7 @@ const orderSchema = Schema(
     },
     time: {
       type: String,
-      default:() => moment().format("HH:mm"),
+      default: () => moment().format("HH:mm"),
     },
     date: {
       type: String,
@@ -42,10 +42,7 @@ const orderSchema = Schema(
       type: String,
       required: [true, "Set description for order"],
     },
-    img: {
-      type: String,
-      default: false,
-    },
+    img: { type: Schema.Types.Mixed, default: false },
     owner: {
       type: Schema.Types.ObjectId,
       ref: "user",

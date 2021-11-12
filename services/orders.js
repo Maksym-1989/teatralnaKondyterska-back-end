@@ -20,6 +20,11 @@ const listOrders = async (filter) => {
 
   return data;
 };
+const getOneById = async (id) => {
+  const data = await Order.findById(id);
+
+  return data;
+};
 
 const getForDate = async (id, date) => {
   const result = await Order.find({
@@ -45,5 +50,6 @@ module.exports = {
   getForMonth,
   getForDate,
   listOrders,
-  remove
+  remove,
+  getOneById
 };

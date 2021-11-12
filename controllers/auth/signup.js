@@ -2,7 +2,7 @@ const { users: service } = require("../../services");
 
 const signup = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
+    const { email} = req.body;
     const user = await service.getOne({ email });
     if (user) {
       return res.status(409).json({
