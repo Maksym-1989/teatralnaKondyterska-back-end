@@ -16,11 +16,11 @@ const orderSchema = Schema(
     },
     time: {
       type: String,
-      default: () => moment().format("HH:mm"),
+      required: [true, "Set time for order"],
     },
     date: {
       type: String,
-      default: () => moment().format("DD.MM.YYYY"),
+      required: [true, "Set date for order"],
     },
     weight: {
       type: Number,
@@ -51,7 +51,7 @@ const orderSchema = Schema(
   },
   {
     versionKey: false,
-    timestamps: false,
+    timestamps: true,
   }
 );
 
