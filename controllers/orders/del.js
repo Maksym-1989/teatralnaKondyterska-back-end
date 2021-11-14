@@ -6,7 +6,6 @@ const del = async (req, res, next) => {
     const { _id } = req.user;
 
     const delObj = await service.remove(id, _id);
-    console.log(delObj);
     if (delObj) {
       return res.status(200).json({
         status: "success",
