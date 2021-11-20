@@ -20,7 +20,7 @@ const orderSchema = Schema(
     },
     date: {
       type: String,
-      default: () => await moment(Date.now()).format("DD.MM.YYYY"),
+      default: () =>  moment(()=>new Date()).format("DD.MM.YYYY"),
     },
     dateToReady: {
       type: String,
