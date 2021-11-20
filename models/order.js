@@ -21,7 +21,7 @@ const orderSchema = Schema(
     },
     date: {
       type: String,
-      default: () => moment(new Date()).format("DD.MM.YYYY"),
+      default: () => moment(Date.now).format("DD.MM.YYYY"),
     },
     dateToReady: {
       type: String,
@@ -59,6 +59,7 @@ const orderSchema = Schema(
     timestamps: false,
   }
 );
+
 
 const Order = model("order", orderSchema);
 
