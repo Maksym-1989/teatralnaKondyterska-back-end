@@ -1,7 +1,6 @@
 const { Schema, model } = require("mongoose");
 const moment = require("moment");
 
-
 const phoneRegex = /^(?:\+38)?(0\d{9})$/;
 
 const orderSchema = Schema(
@@ -21,7 +20,7 @@ const orderSchema = Schema(
     },
     date: {
       type: String,
-      default: () =>() => moment(new Date()).format("DD.MM.YYYY"),
+      default: () => moment(Date.now()).format("DD.MM.YYYY"),
     },
     dateToReady: {
       type: String,
@@ -59,7 +58,6 @@ const orderSchema = Schema(
     timestamps: false,
   }
 );
-
 
 const Order = model("order", orderSchema);
 
